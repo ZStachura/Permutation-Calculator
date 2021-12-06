@@ -5,12 +5,16 @@ var firstper=[];
 var secondper=[];
 var next=[];
 var numberofperm=0;
-var store=[]
+var store=[];
+var element=[];
+var g=0;
 getInput()
+if(store.length>0){
+element=store;}
 
 function saveInput(forsave, storageName = 'inputtstorage') {
-	store.push(forsave)
-	localStorage.setItem(storageName, JSON.stringify(store))
+	element.push(forsave)
+	localStorage.setItem(storageName, JSON.stringify(element))
 	getInput()
   }
 
@@ -25,7 +29,6 @@ function getInput(storageName = 'inputtstorage') {
   function removeLocalStorage()
   {
 	  localStorage.clear();
-	  store=[];
 	  console.log(store)
   }
 
@@ -33,6 +36,15 @@ function getInput(storageName = 'inputtstorage') {
 	  document.getElementById("r_output").value = "";
       document.getElementById("p_output").value = "";
       document.getElementById("m_output").value = "";
+	  getInput()
+	  for(var i=g;i<store.length;i++){
+	  var opt=document.createElement('option');
+	  opt.value=opt.text=store[i];
+	  document.getElementById("history").appendChild(opt);
+	  console.log("Input value:",document.getElementById("input").value)
+	}
+	g=i;
+
   }
 
 function IN(BV, BId){
@@ -86,6 +98,7 @@ function IN(BV, BId){
 		document.getElementById("B(").disabled = true;
 		document.getElementById("B)").disabled=true;
 		console.log("Number of perm:",numberofperm)
+		console.log(element)
 		saveInput(inputper)
 	}
 	document.getElementById("input").value = inputper;
