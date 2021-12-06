@@ -1,0 +1,177 @@
+body{
+    background-color: #2d2e2c;
+}
+form{
+    width: 400px;
+    height: 600px;
+    background-color: rgb(197, 159, 115);
+    text-align: center;
+    margin: 10px auto;
+    margin-top: 35px;
+    display: block;
+    border-radius: 15px;
+}
+button{
+    position: relative;
+}
+input {
+    outline: 0;
+    position: relative;
+    left: 5px;
+    top: 5px;
+    border: 0;
+    color: #495069;
+    background-color: 4px;
+    margin: 5px;
+    font-size: 20px;
+    box-shadow: 0 4px rgba(0,0,0,0.2);
+}
+.key, .oc, .storage, .help , .operator, .clear,.blank, .remove{
+    position: relative;
+    width: 80px;
+    height: 50px;
+}
+.remove{
+    background-color: rgb(0, 132, 141);
+    font-size: 20px;
+}
+.operator :disabled{
+    background-color: rosybrown;
+}
+#clear{
+    background-color: #ff9fa8;
+}
+.oc :disabled{
+    background-color: rosybrown;
+}
+.storage, .help{
+    background-color: rgb(130, 197, 228);
+}
+.out{
+    height: 50px;
+    width: auto;
+}
+.in{
+    height: 50px;
+    width: 350px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+@media (max-width:600px) {
+
+    form{
+        width: 340px;
+        height: 500px;
+        background-color: rgb(197, 159, 115);
+        text-align: center;
+        margin: 10px auto;
+        margin-top: 35px;
+        display: block;
+        border-radius: 15px;
+    }
+    button{
+        position: relative;
+    }
+    input {
+        outline: 0;
+        position: relative;
+        left: 5px;
+        top: 5px;
+        border: 0;
+        color: #495069;
+        background-color: 4px;
+        margin: 5px;
+        font-size: 14px;
+        box-shadow: 0 4px rgba(0,0,0,0.2);
+    }
+    .key, .oc, .storage, .help , .operator, .clear,.blank,.remove{
+        position: relative;
+        width: 65px;
+        height: 40px;
+    }
+    .remove{
+        background-color: rgb(0, 132, 141);
+        font-size: 10px;
+    }
+    .operator :disabled{
+        background-color: rosybrown;
+    }
+    #clear{
+        background-color: #ff9fa8;
+    }
+    .oc :disabled{
+        background-color: rosybrown;
+    }
+    .storage, .help{
+        background-color: rgb(130, 197, 228);
+    }
+    .out{
+        height: 35px;
+        width: auto;
+    }
+    .in{
+        height: 35px;
+        width: 300px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+}
+@media (orientation:landscape) and (max-width:900px)
+{
+    form{
+        width: 500px;
+        height: 300px;
+        background-color: rgb(197, 159, 115);
+        text-align: center;
+        margin: 10px auto;
+        border-radius: 15px;
+        display: block;
+    }
+    button{
+        position: relative;
+    }
+    input {
+        outline: 0;
+        position: relative;
+        left: 5px;
+        top: 5px;
+        border: 0;
+        color: #495069;
+        background-color: 4px;
+        margin: 1px;
+        font-size: 10px;
+        box-shadow: 0 4px rgba(0,0,0,0.2);
+    }
+    .key, .oc, .storage, .help , .operator, .clear,.blank, .remove{
+        position: relative;
+        width: 65px;
+        height: 25px;
+        margin-top: 1px;
+    }
+    .operator :disabled{
+        background-color: rosybrown;
+    }
+    #clear{
+        background-color: #ff9fa8;
+    }
+    .oc :disabled{
+        background-color: rosybrown;
+    }
+    .storage, .help{
+        background-color: rgb(130, 197, 228);
+    }
+    .remove{
+        background-color: rgb(0, 132, 141);
+        font-size: 10px;
+    }
+    .out{
+        height: 30px;
+        width: 400px;
+    }
+    .in{
+        height: 30px;
+        width: 450px;
+        margin-bottom: 5px;
+        margin-top: 1px;
+    }
+}

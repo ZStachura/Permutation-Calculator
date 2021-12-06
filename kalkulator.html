@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Permutacion calculator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="kalk.js"></script>
+</head>
+<body>
+    <form name="calculator">
+        
+            <input list="history" class="in" value="" id="input" onclick="readStorage()">
+            <datalist id="history">
+            </datalist>
+            <br>
+            <div class="elements">
+            <input type="button" class="blank" value="multiply" disabled=true>
+            <input type="text" class="out" value="" id="m_output"  readonly>
+            <br>
+            <input type="button" class="blank" value="power" disabled=true>
+            <input type="text" class="out" value="" id="p_output" readonly >
+            <br>
+            <input type="button" class="blank" value="reverse" disabled=true>
+            <input type="text" class="out" value="" id="r_output" readonly>
+            <div class="keys">
+            <br>
+        </div>
+        <div class="numberkeys">
+            <input type="button" class="key" name="one" value="1" onclick="IN(this.value, this.id)" id="B1" disabled="true">
+            <input type="button" class="key" name="two" value="2" onclick="IN(this.value, this.id)" id="B2" disabled="true">
+            <input type="button" class="key" name="three" value="3" onclick="IN(this.value, this.id)" id="B3" disabled="true">
+            <input type="button" class="operator" name="multiply" value="multiply" onclick="multiply()" id="M" disabled="true">
+            <br>
+            <input type="button" class="key" name="four" value="4" onclick="IN(this.value, this.id)" id="B4" disabled="true">
+            <input type="button" class="key" name="five" value="5" onclick="IN(this.value, this.id)" id="B5" disabled="true">
+            <input type="button" class="key" name="six" value="6" onclick="IN(this.value, this.id)" id="B6" disabled="true">
+            <input type="button" class="operator" name="power" value="power" onclick="power()" id="P" disabled="true">
+            <br>
+            <input type="button" class="key" name="seven" value="7" onclick="IN(this.value, this.id)" id="B7" disabled="true">
+            <input type="button" class="key" name="eight" value="8" onclick="IN(this.value, this.id)" id="B8" disabled="true">
+            <input type="button" class="key" name="nine" value="9" onclick="IN(this.value, this.id)" id="B9" disabled="true"> 
+            <input type="button" class="operator" name="reverse" value="reverse" onclick="Reverse()" id="R" disabled="true">
+            <br>
+            <input type="button" class="key" id="clear" name="clear" value="C" onclick="clean()" id="C">
+            <input type="button" class="help" name="help" value="help">
+            <input type="button" class="oc" name="open" value="(" onclick="IN(this.value, this.id)" id="B(" >
+            <input type="button" class="oc" name="close" value=")" onclick="IN(this.value, this.id)" id="B)" disabled="true">
+            <br>
+            <input type="button" class="remove" id="removekey" value="clear history" onclick="removeLocalStorage()" >
+            <br>
+        </div>
+    </form>
+
+    
+</body>
+
+</html>
