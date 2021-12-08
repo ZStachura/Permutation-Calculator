@@ -10,7 +10,7 @@
 <body>
     <form name="calculator">
         
-            <input list="history" class="in" value="" id="input" onclick="readStorage()" >
+            <input list="history" class="in" value="" id="p_input" onclick="readStorage()" onchange="Replace()">
             <datalist id="history">
             </datalist>
             <br>
@@ -43,13 +43,29 @@
             <input type="button" class="operator" name="reverse" value="reverse" onclick="Reverse()" id="R" disabled="true">
             <br>
             <input type="button" class="key" id="clear" name="clear" value="C" onclick="clean()" id="C">
-            <input type="button" class="help" name="help" value="help">
+            <input type="button" class="help" name="help" value="help" onclick="Help()">
             <input type="button" class="oc" name="open" value="(" onclick="IN(this.value, this.id)" id="B(" >
             <input type="button" class="oc" name="close" value=")" onclick="IN(this.value, this.id)" id="B)" disabled="true">
             <br>
-            <input type="button" class="remove" id="removekey" value="clear history" onclick="removeLocalStorage()" >
+            <input type="button" class="remove" id="removekey" value="CLS" onclick="removeLocalStorage()" >
             <br>
         </div>
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+              <h2>Help:</h2>
+              <p>Buttons which you shouldn't use are automatically blocked</p>
+              <p>To clear the input use 'C' button</p>
+              <p>Input is automatically saved</p>
+              <p>To get into history click on the right side of the input field</p>
+              <p>To clear Local Storage use 'CLS' button</p>
+              <p>You can use application in portrait and vertical view</p>
+              <p>Calculator has also option for desktops</p>
+            </div>
+          
+          </div>
+
     </form>
 
     
